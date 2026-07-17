@@ -33,7 +33,7 @@ jobs:
             format: 'table'
             ignore-unfixed: true
             vuln-type: 'os,library'
-            severity: 'HIGH,CRITICAL'
+            severity: 'HIGH,CRITICAL,LOW'
             output: 'trivy-report.txt'
 
       # スキャンレポートをGitHub Actionsのアーティファクトとして保存
