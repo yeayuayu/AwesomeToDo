@@ -21,18 +21,19 @@ jobs:
         uses: actions/checkout@v4
 
       # Docker Compose のセットアップ
-      - name: Start Docker Compose services
-        run: docker compose up -d
+      #- name: Start Docker Compose services
+      #  run: docker compose up -d
 
       # Trivyでコンテナイメージをスキャン
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@master
         with: 
-            image-ref: 'awesometodo:latest'
+            #image-ref: 'awesometodo:latest'
+            image-ref: 'ghcr.io/yeayuayu/awesometodo:82a3526373d93c627273b5fe7c5fb9e38f0d548d'
             format: 'table'
-            ignore-unfixed: true
+            #ignore-unfixed: true
             vuln-type: 'os,library'
-            severity: 'HIGH,CRITICAL'
+            severity: 'HIGH,CRITICAL,LOW'
             output: 'trivy-report.txt'
 
       # スキャンレポートをGitHub Actionsのアーティファクトとして保存
