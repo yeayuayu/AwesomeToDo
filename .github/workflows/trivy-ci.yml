@@ -31,7 +31,7 @@ jobs:
             #image-ref: 'awesometodo:latest'
             image-ref: 'ghcr.io/yeayuayu/awesometodo:82a3526373d93c627273b5fe7c5fb9e38f0d548d'
             format: 'table'
-            ignore-unfixed: true
+            #ignore-unfixed: true
             vuln-type: 'os,library'
             severity: 'HIGH,CRITICAL,LOW'
             output: 'trivy-report.txt'
